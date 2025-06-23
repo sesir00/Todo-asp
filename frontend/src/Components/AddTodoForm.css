@@ -1,0 +1,81 @@
+/* src/components/AddTodoForm.css */
+.add-todo-form {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 15px; /* Space between rows */
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px; /* Space between items in a row */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.form-input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.title-input {
+    flex: 2 1 200px; /* Grow more, basis 200px */
+}
+.date-input {
+   flex: 1 1 150px;
+   min-width: 150px;
+}
+.priority-select {
+   flex: 1 1 150px;
+   min-width: 150px;
+}
+
+
+.description-input {
+   flex: 1 1 100%; /* Take full width in its row */
+    resize: vertical; /* Allow vertical resize */
+}
+
+.button-row {
+    justify-content: flex-end; /* Push button to the right */
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Bootstrap success green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* Adjust layout for smaller screens if needed */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+     .form-input {
+        width: 100%; /* Make inputs full width on small screens */
+    }
+     .button-row {
+        justify-content: center; /* Center button */
+     }
+}

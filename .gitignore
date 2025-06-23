@@ -1,0 +1,14 @@
+# Visual Studio files
+.vs/
+*.sln
+*.suo
+*.user
+
+# Build artifacts
+bin/
+obj/
+node_modules/
+
+# Other common ignores
+*.log
+.env

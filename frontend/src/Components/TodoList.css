@@ -1,0 +1,62 @@
+/* src/components/TodoList.css */
+.todo-list-container {
+    /* Padding/background moved to main-content in App.css */
+    /* Remove specific background/padding here if desired */
+ }
+ 
+ .todo-list-container h2 {
+     margin-top: 20px; /* Space above the list heading */
+     margin-bottom: 15px;
+     color: #495057; /* Slightly muted heading color */
+     border-bottom: 1px solid #dee2e6; /* Light border */
+     padding-bottom: 8px;
+ }
+ 
+ 
+ .todo-list {
+     list-style: none;
+     padding: 0;
+     margin: 0 0 20px 0; /* Space below the list */
+     border: 1px solid #dee2e6; /* Lighter border for the list */
+     border-radius: 6px;
+     overflow: hidden; /* Ensures border radius clips children */
+      background-color: #fff; /* Ensure list background is white if container isn't */
+ }
+ 
+ .no-todos-message {
+     text-align: center;
+     padding: 30px 20px;
+     color: #6c757d; /* Grey text */
+     font-style: italic;
+ }
+ 
+ 
+ .error-message {
+     color: #721c24; /* Darker red text */
+     background-color: #f8d7da; /* Light red background */
+     border: 1px solid #f5c6cb; /* Red border */
+     padding: 10px 15px;
+     border-radius: 4px;
+     margin-bottom: 20px; /* Space below error */
+     font-size: 0.95em;
+ }
+ 
+ .refresh-button {
+     margin-top: 10px; /* Adjusted margin */
+     padding: 8px 15px;
+     background-color: #6c757d; /* Secondary grey color */
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.2s ease;
+ }
+ 
+ .refresh-button:hover {
+      background-color: #5a6268;
+ }
+ 
+ .refresh-button:disabled {
+     background-color: #ccc;
+     cursor: not-allowed;
+ }

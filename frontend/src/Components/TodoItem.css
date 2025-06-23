@@ -1,0 +1,96 @@
+/* src/components/TodoItem.css */
+.todo-item {
+    display: flex;
+    justify-content: space-between; /* Pushes main info left, details right */
+    align-items: flex-start; /* Align items to the top */
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    gap: 15px; /* Space between main and details */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-main {
+    flex: 1 1 60%; /* Takes more space, allows shrinking, basis 60% */
+    min-width: 200px; /* Prevent it from getting too small */
+}
+
+.todo-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px; /* Space below title if description exists */
+    display: block; /* Ensure it takes its own line */
+}
+
+.todo-description {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0; /* Reset paragraph margin */
+    white-space: pre-wrap; /* Respect line breaks in description */
+    word-break: break-word; /* Prevent long words from overflowing */
+}
+
+.todo-details {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between detail items */
+    flex-shrink: 0; /* Prevent details section from shrinking */
+    flex-wrap: wrap; /* Allow details to wrap too */
+}
+
+.todo-priority,
+.todo-due-date {
+    font-size: 0.9em;
+    padding: 3px 8px;
+    border-radius: 12px; /* Pill shape */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.todo-priority {
+     font-weight: bold;
+}
+
+.priority-high { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+.priority-medium { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba;}
+.priority-low { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+
+.todo-due-date {
+    color: #6c757d; /* Bootstrap secondary color */
+    background-color: #e9ecef; /* Light grey */
+     border: 1px solid #ced4da;
+}
+
+
+.delete-button {
+    background-color: #dc3545; /* Bootstrap danger red */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+ @media (max-width: 600px) {
+    .todo-item {
+         flex-direction: column; /* Stack main and details vertically */
+         align-items: stretch; /* Make children take full width */
+     }
+     .todo-details {
+         justify-content: flex-start; /* Align details to the left */
+         margin-top: 10px;
+     }
+     .delete-button {
+         margin-left: auto; /* Push delete button to the far right */
+     }
+ }
