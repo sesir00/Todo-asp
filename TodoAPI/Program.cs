@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TodoAPI.AppDataContext;
 using TodoAPI.Interface;
 using TodoAPI.Middleware;
@@ -31,8 +32,11 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
  // Add  This to in the Program.cs file
-builder.Services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings")); 
-builder.Services.AddScoped<TodoDbContext>(); 
+builder.Services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings"));
+// builder.Services.AddScoped<TodoDbContext>(); 
+builder.Services.AddDbContext<TodoDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>(); 
 
