@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("https://todo-asp.netlify.app") // Allow your React app's origin
+                          policy.WithOrigins("http://localhost:5173", "https://todo-asp.netlify.app") // Allow both your React app's origin and localhost
                                 .AllowAnyHeader()  // Allows any header in the request
                                 .AllowAnyMethod(); // Allows GET, POST, PUT, DELETE etc.
                       });
