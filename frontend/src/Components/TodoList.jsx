@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
-import { getTodos, addTodo, updateTodo, deleteTodo } from '../api/todoApi'; // updateTodo might not be used yet
+import { getTodos, addTodo, updateTodo, deleteTodo } from '../api/TodoApi'; // updateTodo might not be used yet
 import './TodoList.css';
 
 const TodoList = () => {

@@ -1,7 +1,7 @@
 // src/api/todoApi.js
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5242/api'; // Fallback URL
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'https://todo-api-8f79.onrender.com/api/Todo'; // Fallback URL
 
 const apiClient = axios.create({
     baseURL: API_URL,
