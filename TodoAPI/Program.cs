@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("https://todo.shishir.com.np") // Allow your React app's origin
+                          policy.WithOrigins("http://localhost:5173") // Allow your React app's origin
                                 .AllowAnyHeader()  // Allows any header in the request
                                 .AllowAnyMethod(); // Allows GET, POST, PUT, DELETE etc.
                       });
